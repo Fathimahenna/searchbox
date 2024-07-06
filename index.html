@@ -3,57 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Search Box</title>
-    <style>
-        .search-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f2f5;
-        }
-        .search-box {
-            width: 400px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            padding: 10px;
-            background-color: #fff;
-        }
-        .search-box input {
-            width: 95%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .search-box button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .search-box button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <title>SharePoint Custom Search</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="search-container">
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search...">
-            <button onclick="search()">Search</button>
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button onclick="performSearch()">Search</button>
         </div>
+        <div id="searchResults"></div>
     </div>
 
-    <script>
-        function search() {
-            const query = document.getElementById('searchInput').value;
-            alert('Searching for: ' + query);
-            // Implement your search logic here
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
